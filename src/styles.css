@@ -14,8 +14,7 @@ body {
     #e3eeff 100%
   );
   border-radius: 20px;
-  padding: 20px;
-  text-transform: capitalize;
+  padding: 20px 20px 2px;
   box-shadow: 0 0 50px rgb(114, 110, 110), -10px 0 80px #5472f5,
     10px 0 80px #3cf1f1b9;
 }
@@ -62,6 +61,7 @@ h3 {
   text-align: center;
   font-size: 20px;
   font-family: "Bodoni Moda";
+  text-transform: capitalize;
 }
 
 ul {
@@ -70,10 +70,6 @@ ul {
   font-size: 18px;
   margin: 20px 10px;
   padding: 10px;
-}
-
-.wind {
-  text-transform: none;
 }
 
 a {
@@ -150,4 +146,19 @@ img {
   margin: 0 auto;
   width: 100%;
   max-width: 120px;
+}
+
+footer {
+  margin-top: calc(5%);
+  width: 100%;
+  text-align: center;
+}
+.pageAuthor {
+  text-decoration: underline;
+}
+footer:hover .pageAuthor {
+  display: none;
+}
+footer:hover:after {
+  content: "Agnieszka Krzysztofik 👩🏼‍💻";
 }
