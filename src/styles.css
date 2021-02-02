@@ -72,7 +72,7 @@ ul {
   padding: 10px;
 }
 
-a {
+.tempSymbol {
   text-decoration: none;
 }
 
@@ -146,6 +146,11 @@ img {
   margin: 0 auto;
   width: 100%;
   max-width: 120px;
+}
+
+.gitHubLink {
+  text-decoration: none;
+  font-weight: 450;
 }
 
 footer {
