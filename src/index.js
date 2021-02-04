@@ -33,38 +33,46 @@ currentTime.innerHTML= formatTime(now);
 function changeToFahrenheit(event){  
   event.preventDefault();
   let currentTemperature = document.querySelector("#current-temperature");
-  // let temp = Math.round(currentTemperature.innerHTML * 9/5 + 32); 
-  // currentTemperature.innerHTML = temp;
-  currentTemperature.innerHTML = 54;
+  let temp = Math.round(celsius * 9/5 + 32); 
+  currentTemperature.innerHTML = temp;
+  celsiusLink.classList.remove("active")
+  fahrenheitLink.classList.add("active")
+
 }
 
 function changeToCelsius(event){
   event.preventDefault();
   let currentTemperature = document.querySelector("#current-temperature");
-  // let temp = Math.round((currentTemperature.innerHTML - 32)  * 5/9); 
-  // currentTemperature.innerHTML = temp;
-  currentTemperature.innerHTML = 12;
+  currentTemperature.innerHTML = Math.round(celsius);
+  celsiusLink.classList.add("active")
+  fahrenheitLink.classList.remove("active")
 }
 
-let celsius = document.querySelector("#celsius");
-let fahrenheit = document.querySelector("#fahrenheit")
+let celsius = null;
 
-celsius.addEventListener("click", changeToCelsius);
-fahrenheit.addEventListener("click", changeToFahrenheit);
+let celsiusLink = document.querySelector("#celsius")
+let fahrenheitLink = document.querySelector("#fahrenheit")
+
+celsiusLink.addEventListener("click", changeToCelsius);
+fahrenheitLink.addEventListener("click", changeToFahrenheit);
 
 
 
 function showWeather(response){
   let city = document.querySelector("#city");
   city.innerHTML = response.data.name;
+ 
+  celsius = response.data.main.temp
+
   let currentTemperature = document.querySelector("#current-temperature");
-  currentTemperature.innerHTML = Math.round(response.data.main.temp);
+  currentTemperature.innerHTML = Math.round(celsius);
   let humidity = document.querySelector("#humidity");
   humidity.innerHTML = `${response.data.main.humidity}%`;
   let wind = document.querySelector("#wind");
   wind.innerHTML = `${response.data.wind.speed} km/h`;
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
+
 }
 
 function search (inputCity){

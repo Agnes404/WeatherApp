@@ -2,19 +2,20 @@ body {
   background: url("https://images.unsplash.com/photo-1591107417465-14319a9dd081?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=668&q=80");
   background-size: 1440px 545px;
 }
+
 .container {
   display: block;
   margin: 35px auto;
-  width: max-content;
+  width: fit-content;
   height: fit-content;
   background-image: linear-gradient(
     to top,
-    #f3e7e9 0%,
-    #e3eeff 99%,
-    #e3eeff 100%
+    rgb(243, 231, 233, 0.9) 0%,
+    rgb(227, 238, 255) 99%,
+    rgb(227, 238, 255) 100%
   );
   border-radius: 20px;
-  padding: 20px 20px 2px;
+  padding: 20px;
   box-shadow: 0 0 50px rgb(114, 110, 110), -10px 0 80px #5472f5,
     10px 0 80px #3cf1f1b9;
 }
@@ -70,10 +71,16 @@ ul {
   font-size: 18px;
   margin: 20px 10px;
   padding: 10px;
+  text-align: center;
 }
 
 .tempSymbol {
   text-decoration: none;
+  cursor: default;
+}
+
+.weather-temperature .active {
+  color: black;
 }
 
 .searchEngine {
@@ -84,7 +91,7 @@ ul {
 input {
   border: 1px double rgb(209, 209, 209);
   border-radius: 15px;
-  margin: 0 auto 20px;
+  margin: 10px auto;
   text-align: center;
   font-size: 20px;
   font-family: "Tinos", serif;
@@ -109,6 +116,7 @@ input {
   min-width: 120px;
   height: 100%;
   border-radius: 26px 10px;
+  padding: 5px;
 }
 
 .card-img-top {
