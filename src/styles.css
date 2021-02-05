@@ -66,10 +66,10 @@ h3 {
 }
 
 ul {
+  display: initial;
   list-style: none;
   font-family: "Tinos", serif;
-  font-size: 18px;
-  margin: 20px 10px;
+  font-size: 20px;
   padding: 10px;
   text-align: center;
 }
