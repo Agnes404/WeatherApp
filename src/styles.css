@@ -111,6 +111,17 @@ input {
   margin: 0px 10px;
 }
 
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .col-sm {
+    flex: 1 0 177px;
+    margin: 5px;
+  }
+}
+
+.col-sm {
+  margin: 3px;
+}
+
 .card {
   background: none;
   min-width: 120px;
