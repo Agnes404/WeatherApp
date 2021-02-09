@@ -74,7 +74,6 @@ function showWeather(response){
   wind.innerHTML = `${response.data.wind.speed} km/h`;
   let description = document.querySelector("#description");
   description.innerHTML = response.data.weather[0].description;
-
 }
 
 function getForecastDate(timestamp){
@@ -93,12 +92,13 @@ function displayForecast (response){
   for (let index = 1; index < 6; index++) {
   forecast = response.data.daily[index]
   forecastElement.innerHTML += `
-     <div class="col-sm">
-        <div class="card card border-info mb-3">
+     <div class="col-sm forecastGrid">
+        <div class="card h-100 card border-info mb-3">
           <img
-             src="http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png"
-            class="card-img-top"
-            alt="Weather prediction icon"
+          src="images/${forecast.weather[0].icon}.png"
+          class="card-img-top"
+          id="weather-icon"
+          alt="Weather prediction icon"
           />
           <div class="card-body">
             <h5 class="card-title">
@@ -115,9 +115,7 @@ function displayForecast (response){
         </div>
       </div>
       `;
-}
-
-   
+  }
 }
 
 function search (inputCity){
@@ -165,3 +163,4 @@ function navigation(event){
 }
 let currentLocation = document.querySelector("#current-location-button");
 currentLocation.addEventListener("click", navigation);
+

@@ -127,17 +127,17 @@ input {
   min-width: 120px;
   height: 100%;
   border-radius: 26px 10px;
-  padding: 5px;
 }
 
 .card-img-top {
-  max-width: 129px;
-  max-height: 120px;
+  height: fit-content;
+  padding: 5px;
 }
 
 .card-body {
   min-width: 139px;
   height: 80px;
+  flex-basis: 64px;
 }
 
 .card-text {
@@ -164,7 +164,7 @@ img {
   display: block;
   margin: 0 auto;
   width: 100%;
-  max-width: 120px;
+  max-width: 129px;
 }
 
 .gitHubLink {
