@@ -118,6 +118,12 @@ input {
   }
 }
 
+@media (max-width: 767px) {
+  .col-sm {
+    flex: 1 0 0%;
+  }
+}
+
 .col-sm {
   margin: 3px;
 }
