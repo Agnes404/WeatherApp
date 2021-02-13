@@ -123,7 +123,13 @@ function search (inputCity){
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showWeather);
   
-  
+
+ axios.get(apiUrl) .catch(function (error) {
+    if (error.response) {
+     alert("Sorry, we couldn't find your city. Please type another one.")
+    }
+  });
+
   function convertCity(response){
     let apiKey = "2af3f8b254a603f2b9c0355c32990678";
     let latitude = response.data.coord.lat;
